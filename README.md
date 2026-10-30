@@ -27,6 +27,8 @@ Entre os cenários considerados estão:
 - UDP
 - TFTP
 
+Os arquivos CSV utilizados nos experimentos são mantidos localmente e não estão versionados neste repositório.
+
 ## Organização da Pesquisa
 
 ### 1. Preparação dos Dados
@@ -76,30 +78,23 @@ Entre as métricas consideradas para avaliação dos modelos estão:
 ## Estrutura do Repositório
 
 ```text
-├── datasets/
-│   ├── CICDDOS2019/
-│   │   ├── 01-12/
-│   │   └── 03-11/
+├── notebooks/
+│   ├── 01_preparacao_dados/
+│   │   ├── exploratorio/
+│   │   └── tratamento_geracaoDataset/
+│   │       ├── classe_unica/
+│   │       ├── total_fluxo/
+│   │       └── tratamento/
 │   │
-│   ├── balanceados/
-│   ├── classe_unica/
-│   └── tratados/
+│   ├── 02_treinamento/
+│   │   ├── modelos_cheio.ipynb
+│   │   └── modelos_fluxo.ipynb
+│   │
+│   └── 03_explicabilidade/
+│       ├── cheio/
+│       └── fluxo/
 │
-└── notebooks/
-    ├── 01_preparacao_dados/
-    │   ├── exploratorio/
-    │   └── tratamento_geracaoDataset/
-    │       ├── classe_unica/
-    │       ├── total_fluxo/
-    │       └── tratamento/
-    │
-    ├── 02_treinamento/
-    │   ├── modelos_cheio.ipynb
-    │   └── modelos_fluxo.ipynb
-    │
-    └── 03_explicabilidade/
-        ├── cheio/
-        └── fluxo/
+└── README.md
 ```
 
 ## Tecnologias e Bibliotecas
@@ -115,3 +110,6 @@ Entre as métricas consideradas para avaliação dos modelos estão:
 - Seaborn
 
 ---
+
+**Universidade Federal de Uberlândia (UFU)**  
+Projeto de Iniciação Científica
